@@ -28,11 +28,13 @@ class OS(BaseHardwareModel):
 
     FIELD_TYPE = 'type'
     FIELD_DISTRO = 'distro'
-    FIELD_VERSION = 'version'
+    FIELD_DISTRO_RELEASE = 'distro_release'
     FIELD_KERNEL_VERSION = 'kernel_version'
 
     def _fetch_info(self):
         return OrderedDict([
            (self.FIELD_TYPE, self.system.os_type),
+           (self.FIELD_DISTRO, self.system.distro),
+           (self.FIELD_DISTRO_RELEASE, self.system.distro_release),
            (self.FIELD_KERNEL_VERSION, self.system.kernel_version),
         ])

@@ -23,6 +23,7 @@ from .machine import Machine as module_machine
 from ._os import OS as module_os
 from .cpu import CPU as module_cpu
 from .memory import Memory as module_memory
+from .disk import Disk as module_disk
 from .nic import NIC as module_nic
 
 modules = [
@@ -31,6 +32,7 @@ modules = [
     module_cpu,
     module_memory,
     module_nic,
+    module_disk,
 ]
 
 
