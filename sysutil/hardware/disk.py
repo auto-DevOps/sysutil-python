@@ -48,6 +48,9 @@ class Disk(BaseHardwareModel):
         disks = []
 
         for device in BlockDevice.iter():
+            if not device.has_device:
+                continue
+
             partitions = []
             for partition in device.iter_partitions():
                 partitions.append(OrderedDict([
